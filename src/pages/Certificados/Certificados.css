@@ -1,0 +1,240 @@
+.body-certificados {
+  background: linear-gradient(180deg, #452B12 0%, #281D11 100%);
+  min-height: 100vh;
+}
+
+.container-certificados {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  gap: 20px;
+  padding: 10vh 5vw;
+}
+
+.container-certificados ::selection {
+  background: var(--accent-yellow);
+  color: #000;
+}
+
+.image-container-certificados {
+  position: relative;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+  border-radius: 16px;
+}
+
+.image-container-certificados::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  bottom: -3px;
+  left: -3px;
+  background-image: linear-gradient(120deg, var(--accent-yellow), white, var(--accent-yellow), white);
+  background-size: 200% 200%;
+  border-radius: 16px;
+  z-index: -1;
+  animation: changes 40s linear infinite;
+}
+
+.image-container-certificados img {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  border-radius: 16px;
+  z-index: 1;
+}
+
+@keyframes changes {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 400% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.text-container-certificados {
+  text-align: left;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.text-container-certificados h1 {
+  font-size: 4rem;
+  margin: 0;
+  color: var(--accent-yellow);
+}
+
+.text-container-certificados p {
+  color: white;
+}
+
+.swiper-container-certificados {
+  margin: 2rem auto;
+  padding: 0 20px;
+  max-width: 1000px;
+  perspective: 1000px;
+  overflow: hidden;
+}
+
+.certificado {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.certificado img {
+  width: 80%;
+  height: 100%;
+  object-fit: cover;
+  margin: 0 auto;
+  display: block;
+  border-radius: 16px;
+  margin: 0 auto;
+}
+
+
+.certificado-info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  opacity: 0;
+  border-radius: 16px;
+  transition: opacity 0.3s;
+  padding: 2rem;
+
+}
+
+.certificado:hover .certificado-info {
+  opacity: 1;
+}
+
+.certificado-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.certificado-info p {
+  margin: 5px 0;
+}
+
+.certificado-info a {
+  display: inline-block;
+  background-color: var(--accent-yellow);
+  color: #000;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  margin-top: 10px;
+  transition: background-color 0.3s, transform 1.2s;
+}
+
+.certificado-info a:hover {
+  background-color: #ffcc29;
+  font-weight: 700;
+  transform: scale(1.2);
+}
+
+.nome-curso {
+  color: var(--accent-yellow);
+}
+
+@media (min-width: 768px) {
+  .container-certificados {
+    padding: 5vh 10vw 10vh 10vw;
+  }
+
+  .image-container-certificados,
+  .text-container-certificados {
+    max-width: 45%;
+  }
+
+  .text-container-certificados h1 {
+    font-size: 3.5rem;
+  }
+
+}
+
+@media (max-width: 550px) {
+  .swiper-container-certificados .certificado {
+    height: 250px;
+  }
+
+  .swiper-container-certificados .certificado img {
+    width: 100%;
+    height: auto;
+  }
+
+  .swiper-container-certificados .certificado-info {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 444px) {
+  .text-container-certificados h1 {
+    font-size: 3.2rem;
+  }
+
+  .swiper-container-certificados {
+    padding: 0 10px;
+  }
+
+  .certificado {
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .certificado img {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .certificado-info {
+    padding: 10px;
+    font-size: 14px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: none;
+  }
+
+  .certificado-info h3 {
+    font-size: 18px;
+  }
+
+  .certificado-info p {
+    font-size: 12px;
+  }
+
+  .certificado-info a {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}
