@@ -72,7 +72,7 @@ import { AnimatePresence } from 'framer-motion';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/portfolio">
       <div className="App">
       <AnimatePresence>
         <Routes>
