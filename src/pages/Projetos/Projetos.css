@@ -39,7 +39,7 @@
   background-size: 200% 200%;
   border-radius: 16px;
   z-index: -1;
-  animation: rotateBorder 40s linear infinite;
+  animation: rotateBorder 6s infinite;
 }
 
 .image-container img {
