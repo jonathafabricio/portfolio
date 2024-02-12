@@ -234,10 +234,10 @@
 
 @media (max-width: 444px) {
     .name {
-        font-size: 2.5rem;
+        font-size: 2.4rem;
     }
     .dev {
-        font-size: 2.31rem;
+        font-size: 2.25rem;
     }
 
     .header-section {
@@ -247,6 +247,15 @@
     .profile-image {
         position: relative;
         top: -60px;
+    }
+}
+
+@media (max-width: 400px) {
+    .name {
+        font-size: 2rem;
+    }
+    .dev {
+        font-size: 2rem;
     }
 }
 
@@ -282,3 +291,26 @@
       display: block;
     }
   }  
+
+  @media (max-width: 320px) {
+    .name {
+        font-size: 1.8rem;
+    }
+    .dev {
+        font-size: 1.8rem;
+    }
+
+    .navbar {
+        padding: 0.1em;
+      }
+
+      .nav-button {
+        font-size: 0.6rem;
+        padding: 0.3rem;
+      }
+    
+      .nav-button span {
+        font-size: 0.6rem;
+      }
+
+}
